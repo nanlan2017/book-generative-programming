@@ -1,4 +1,6 @@
-
+#include "_Common.h"
+#include <vcruntime.h>
+/***************************************************************/
 template<typename ElemType_, int size_>
 class Vector
 {
@@ -48,6 +50,7 @@ public:
 	static const bool has_infinity = false; // 是否可取无限
 	static const bool is_integer = false; // 是否为整型
 
+	static const int digit = 0; // 十进制的最大值
 	static const int digit10 = 0; // 十进制的最大值
 
 	static T min() throw();
@@ -66,4 +69,19 @@ class numeric_limits<float>
 	static const int digit10 = 6; // 十进制的最大值
 
 	static float min() throw() { return 1.175435E-38F; }
+};
+
+//? 类型提升：返回两个类型中精度较高的类型（比较类型的特性exponent10和digits）
+template<typename A, typename B>
+struct Promotion<>
+{
+	enum
+	{
+		max_exp_A = numeric_limits<A>::max_exponent10,
+		max_exp_B = numeric_limits<B>::max_exponent10,
+		digit_A = numeric_limits<A>::digits,
+		digit_B = numeric_limits<B>::digits,
+	};
+	typedef typename IF<(max_exp_A < max_exp_B) || (max_exp_A== max_exp_B && digit_A < digit_B)  , 
+				B, A>::RET RET;
 };

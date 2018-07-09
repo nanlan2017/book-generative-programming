@@ -110,7 +110,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="what%27s template metaprogramming.cpp" />
+    <ClCompile Include="元信息：traits.cpp" />
+    <ClCompile Include="产生式编程 第10章.cpp" />
+    <ClCompile Include="模板元，Hello.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

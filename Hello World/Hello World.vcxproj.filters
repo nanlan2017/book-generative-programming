@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="what%27s template metaprogramming.cpp">
+    <ClCompile Include="模板元，Hello.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="元信息：traits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="产生式编程 第10章.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
