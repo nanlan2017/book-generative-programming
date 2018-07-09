@@ -3,6 +3,9 @@
 #include <iostream>
 using namespace std;
 
+#define EB enum{
+#define EN };
+
 //?  统一用using 定义类型变量， 放在前面很统一！！！
 
 /*
@@ -104,23 +107,63 @@ struct IsEmpty
 template<typename list>
 struct Last
 {
-	enum { val = list::head };		//x 只能比较整型值，貌似没法比较两个类型是否形同？？？
-	/*
-	using RET = (val == endValue) ? list
-								 : Last<typename list::tail>::RET;
-	*/
-	using RET = IF<val == endValue,
-					list,
-					typename Last<typename list::tail>::RET>;
+	enum
+	{
+		RET = IsEmpty<typename list::tail>::RET 
+							? list::head  
+							: Last<typename list::tail>::RET,
+	};
+	using next = typename list::tail; //? 最后一个节点:End节点,其 RET0为Unknown
+	using RET0 = typename IFI <IsEmpty<next>::RET, list, typename Last<next>::RET0>::RET;
+};
+
+template<>
+struct Last<End>
+{
+	enum { RET = 666 };
+	using RET0 = End;
 };
 
 /***************************************************************/
 void main_3()
 {
-	typedef Cons<1, Cons<2, Cons<3>>> list1;
+	using list1 = Cons<1, Cons<2, Cons<3>>>;
 	cout << Length<list1>::RET;
 	cout << Length< AppendL<list1, 4>::RET >::RET;
 
-	typedef Cons<7, Cons<8, Cons<9>>> list2;
+	using list2 = Cons<7, Cons<8, Cons<9>>>;
 	cout << Length< Aped<list1, list2>::RET >::RET;
+
+	cout <<IsEmpty<End>::RET;
+	cout <<IsEmpty<list1>::RET;
+
+	cout << Last<list1>::RET;   // 取最后一个节点的值  //TODO
+	using last_of_list1 = Last<list1>::RET0;	// 取最后一个节点
+
 }
+/***************************************************************/
+template<int n>
+struct Int
+{
+	enum{ value = n};
+};
+struct Endp
+{
+	using head = Int<endValue>;
+	using Tail = Endp;
+};
+template <typename head_, typename tail_= Endp>
+struct Conp
+{
+	using head = head_;
+	using Tail = tail_;
+};
+
+void main_4()
+{
+	//?  二叉树
+	using list1 = Conp<Int<1>,  Conp<     Conp<Int<21>,Conp<Int<31>>>  ,  Conp<Int<22>>       >>;
+}
+
+
+

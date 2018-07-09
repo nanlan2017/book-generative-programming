@@ -110,9 +110,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="元信息：traits.cpp" />
-    <ClCompile Include="产生式编程 第10章.cpp" />
-    <ClCompile Include="模板元，Hello.cpp" />
+    <ClCompile Include="Switch-参考答案.cpp" />
+    <ClCompile Include="Switch.cpp" />
+    <ClCompile Include="type traits.cpp" />
+    <ClCompile Include="functions.cpp" />
+    <ClCompile Include="Hello World.cpp" />
+    <ClCompile Include="List-Tree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IF.h" />
+    <ClInclude Include="_Common.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

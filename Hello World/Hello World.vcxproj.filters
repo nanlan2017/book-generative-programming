@@ -15,14 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="模板元，Hello.cpp">
+    <ClCompile Include="Hello World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="元信息：traits.cpp">
+    <ClCompile Include="type traits.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="产生式编程 第10章.cpp">
+    <ClCompile Include="functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="List-Tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Switch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Switch-参考答案.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

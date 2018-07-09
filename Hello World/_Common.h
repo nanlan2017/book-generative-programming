@@ -13,6 +13,20 @@ struct  IF<false,Then,Else>
 {
 	typedef Else RET;
 };
+//-----------------------------------------------------
+template <int Condition,typename Then, typename Else>
+struct  IFI
+{
+	typedef Then RET;
+};
+
+template <typename Then, typename Else>
+struct  IFI <0,Then,Else>
+{
+	typedef Else RET;
+};
+
+
 
 /***************************************************************/
 #endif
