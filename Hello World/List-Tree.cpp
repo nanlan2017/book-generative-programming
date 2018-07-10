@@ -166,4 +166,13 @@ void main_4()
 }
 
 
-
+template <typename list>
+class Every2nd
+{
+	using Tail = typename list::Tail;
+public:
+	using RET = typename IF< IsEmpty<Tail>::RET,
+							 End,
+							 typename Every2nd<typename Tail::Tail>::RET
+						   >::RET;
+};

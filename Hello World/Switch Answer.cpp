@@ -2,6 +2,24 @@
 #include <iostream>
 using namespace std;
 
+struct stop
+{
+	enum { RET = 1 };
+};
+
+template<int n>
+struct Factorial
+{
+	using PreviousFactorial = IF<n == 0, stop, Factorial<n - 1>>;
+	enum
+	{
+		RET = (n==0)
+				? PreviousFactorial::RET 
+				: PreviousFactorial::RET*n	,
+	};
+};
+
+//X------------------------------------------------------------------------------
 struct A {static void execute() { cout<<"A"<<endl ; } };
 struct B {static void execute() { cout<<"B"<<endl ; } };
 struct D {static void execute() { cout<<"Default"<<endl ; } };
@@ -28,6 +46,8 @@ class SWITCH
 		found = (caseTag== tag || caseTag==DEFAULT)  //? ★★★
 	};
 public:
+	//? ★★ 这个迭代必须在 Case-tag为Default（其NextCase为NilCase—— xu） 时
+	//?  不再继续要求下一个 SWITCH<tag, NilCase> <—— 这个会出错，因为未特化版的NilCase进去会求Next，逻辑上没这个东西
 	using RET =typename  IF<found,
 							typename Case::Type,
 							typename SWITCH<tag, NextCase>::RET

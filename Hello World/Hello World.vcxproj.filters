@@ -33,6 +33,9 @@
     <ClCompile Include="Switch-参考答案.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Fibonacci Recursion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_Common.h">

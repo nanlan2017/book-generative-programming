@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fibonacci Recursion.cpp" />
     <ClCompile Include="Switch-参考答案.cpp" />
     <ClCompile Include="Switch.cpp" />
     <ClCompile Include="type traits.cpp" />
