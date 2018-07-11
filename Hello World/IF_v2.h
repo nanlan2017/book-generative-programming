@@ -3,7 +3,6 @@
 
 namespace intimate 
 {
-
 //? 不使用 模板偏特化 实现的 IF<>           （把成员模板封装在不同的struct中，然后由完全特化匹配其中一个struct）
 struct SelectThen
 {
@@ -41,9 +40,6 @@ class IF
 public:
 	using RET = typename selector::template Result<ThenType, ElseType>::RET;
 };
-
-//x===================================================================================================
-
 
 
 }

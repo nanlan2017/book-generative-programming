@@ -1,7 +1,10 @@
 #include "_Common.h"
 #include <iostream>
 using namespace std;
-
+//X WHILE的行为： 检测当前条件值，若为true,则对当前Env进行一次迭代；否则,结束当前迭代
+//x 而条件值为true/false： 是根据Env里的状态值计算出来的。  所以“条件”表示为： Cond(Env)
+//x 进行一次迭代也是更新一次Env，而且行为是固定的。         所以“进行迭代”表示为： Iter(Env)
+//?								
 //x While语句是 “似函数”的：返回一个对象:最终的迭代状态值。
 //? While_<>
 template<

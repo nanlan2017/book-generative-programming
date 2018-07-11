@@ -3,84 +3,6 @@
 
 using namespace std;
 
-//? switch-case
-template <int default_Case> 
-struct CaseActions
-{
-	enum
-	{
-		RET = 0, // 该种Case的action
-	};
-};
-
-template <> 
-struct CaseActions<1>
-{
-	enum
-	{
-		RET = 111, // 该种Case的action
-	};
-};
-
-template <> 
-struct CaseActions<2>
-{
-	enum
-	{
-		RET = 222, // 该种Case的action
-	};
-};
-
-template <int Condition_val>
-struct SWITCH
-{
-	enum
-	{
-		RET = CaseActions<Condition_val>::RET
-	};
-};
-/***************************************************************/
-//? 计算 Factorial<n>::RET   =  n!
-template<int n>
-struct Factorial
-{
-	enum
-	{
-		RET = Factorial<n-1>::RET*n
-	};
-};
-
-template<>
-struct Factorial<0>
-{
-	enum
-	{
-		RET = 1
-	};
-};
-
-//? C(k,n) = n! / k!(n-k)!  （n必须大于k，否则编译器推导时异常直接卡死！！！）
-template<int k,int n>
-class Combinations
-{
-private:
-	enum
-	{
-		num = Factorial<n>::RET,
-		denum = Factorial<k>::RET * Factorial<n-k>::RET
-	};
-public:
-	enum
-	{
-		RET = num/ denum
-	};
-};
-
-/***************************************************************/
-//x template class既然是可以包含值状态的，那它自己的每个实例都可以当成instance啊！
-//x 而且定义了函数调用运算符后，这个模板实例就成了一个函数对象
-
-
 //? 浮点数
 template <int mantissa_, int exp_>
 struct Float
@@ -109,21 +31,13 @@ struct Sqrt
 
 	typedef Float<val,0> RET;
 };
-/***************************************************************/
 
 //x***************************************************************
 
 int main(int argc, char* argv[])
 {
-	cout << Factorial<10>::RET << endl;
 
 	IF<(1 + 2 > 4), short, int>::RET i;
-
-	cout << Combinations<3,10>::RET << endl;
-
-	cout << SWITCH<555>::RET << endl;
-	cout << SWITCH<1>::RET << endl;
-	cout << SWITCH<2>::RET << endl;
 
 	typedef Float<25, -1> F2p5;
 	float v3 = 8.0;

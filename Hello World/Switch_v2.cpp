@@ -2,24 +2,6 @@
 #include <iostream>
 using namespace std;
 
-struct stop
-{
-	enum { RET = 1 };
-};
-
-template<int n>
-struct Factorial
-{
-	using PreviousFactorial = IF<n == 0, stop, Factorial<n - 1>>;
-	enum
-	{
-		RET = (n==0)
-				? PreviousFactorial::RET 
-				: PreviousFactorial::RET*n	,
-	};
-};
-
-//X------------------------------------------------------------------------------
 struct A {static void execute() { cout<<"A"<<endl ; } };
 struct B {static void execute() { cout<<"B"<<endl ; } };
 struct D {static void execute() { cout<<"Default"<<endl ; } };

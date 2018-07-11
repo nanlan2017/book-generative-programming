@@ -52,20 +52,20 @@ struct CASE<DEFAULT,T, NextCase>
 };
 /********************************************************************/
 //? 递归过程
-template<int Condition , typename CaseList >
+template<int targetVal , typename CaseList >
 struct SWITCH
 {
-	using RET = typename IF<(Condition == CaseList::VAL),
+	using RET = typename IF<(targetVal == CaseList::VAL),
 							typename CaseList::TYPE,
-							typename SWITCH<Condition, typename CaseList::Next>::RET
+							typename SWITCH<targetVal, typename CaseList::Next>::RET
 							>::RET;
 				
 };
 //? 递归最后一步： SWITCH<  Condition, CASE<DEFAULT,D,DefaultCase>  >
 //?   下一步：求 SWITCH<Condition, DefaultCase::Next>
 //?   需要：遇到这种情况时：改写SWITCH,直接返回 CaseList::TYPE
-template<int Condition>
-struct SWITCH<Condition,CASE<DEFAULT,D,End>>
+template<int targetVal>
+struct SWITCH<targetVal,CASE<DEFAULT,D,End>>
 {
 	using RET = DDD;
 };
@@ -74,7 +74,7 @@ struct SWITCH<Condition,CASE<DEFAULT,D,End>>
 void main_5()
 {
 	// 测试
-	using T00 = typename
+	using T00 = 
 	SWITCH<(10),
 		CASE<DEFAULT, D
 		>>::RET;

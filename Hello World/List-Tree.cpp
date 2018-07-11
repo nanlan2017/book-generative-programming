@@ -108,7 +108,6 @@ struct Last
 							: Last<typename list::tail>::RET,
 	};
 	using next = typename list::tail; //? 最后一个节点:End节点,其 RET0为Unknown
-	using RET0 = typename IFI <IsEmpty<next>::RET, list, typename Last<next>::RET0>::RET;
 };
 
 template<>
