@@ -3,18 +3,6 @@
 
 using namespace std;
 
-/*
-//x ▇▇ RET 就是该元函数的 返回值:
-		—————— 变量都是 符号，其代表两种数据：一个整型值/ 一种类型
-		如果这个模板的作用是生成类型：则RETT是 typedef 出的“类型性质的” 符号
-		如果这个模板的作用是计算值：  则RETV是 enum 中定义的“值性质的”  符号
-
-//x ▇▇ 一个template类：可当做一个“函数”
-		一个计算表达式 enumulator RET = f(x,y,z)；
-//x ▇▇▇▇▇▇▇▇▇▇ 一个template Class：也可当做一个“Class” 。它的一个实例 Temp<x,y> 就相当于一个绑定了status value的 对象。
-*/
-/***************************************************************/
-
 //? switch-case
 template <int default_Case> 
 struct CaseActions

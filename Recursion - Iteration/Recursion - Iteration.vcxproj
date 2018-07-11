@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{34932DFF-BC73-4668-8B49-D04705469FA1}</ProjectGuid>
-    <RootNamespace>HelloWorld</RootNamespace>
+    <ProjectGuid>{99BD7D00-0BBA-433F-88FB-D39F8E4C769F}</ProjectGuid>
+    <RootNamespace>RecursionIteration</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,21 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Do.cpp" />
-    <ClCompile Include="EWhile.cpp" />
-    <ClCompile Include="Fibonacci Recursion.cpp" />
-    <ClCompile Include="For.cpp" />
-    <ClCompile Include="Switch Answer.cpp" />
-    <ClCompile Include="Switch.cpp" />
-    <ClCompile Include="type traits.cpp" />
-    <ClCompile Include="functions.cpp" />
-    <ClCompile Include="Hello World.cpp" />
-    <ClCompile Include="List-Tree.cpp" />
-    <ClCompile Include="While.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="IF.h" />
-    <ClInclude Include="_Common.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

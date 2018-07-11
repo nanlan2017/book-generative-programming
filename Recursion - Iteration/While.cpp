@@ -1,25 +1,8 @@
 #include "_Common.h"
+#include <iostream>
+using namespace std;
 
-//X --------------------------------------------------------------------------------------------------
-/*MARK
-//X WHILE的行为： 检测当前条件值，若为true,则对当前Env进行一次迭代；
-//?								否则,结束当前迭代
-
-// 类模板总是比函数模板有更强大的表达能力，所以都是用类模板 ???
-//?    ▇▇▇▇▇1 ▇▇▇▇ 似“函数”模板  （有 RET）
-//?				——> 返回一个数据：
-//?							1. 整型数 enum RET 
-//?							2. 类型实例（实例对象）  using RET     
-//?	   ▇▇▇▇▇2 ▇▇▇▇ 似“对象” 模板  (1个模板实例相当于一个对象instance) 
-//x 而条件值为true/false： 是根据Env里的状态值计算出来的。  所以“条件”表示为： Cond(Env)
-//x 进行一次迭代也是更新一次Env，而且行为是固定的。         所以“进行迭代”表示为： Iter(Env)
-
-//x IF<> 是选择类型的，用在计算using RET 里。而enum里的 RET值 应该是用 ?:
-
-*/
-//X --------------------------------------------------------------------------------------------------
 //x While语句是 “似函数”的：返回一个对象:最终的迭代状态值。
-
 //? While_<>
 template<
 		bool Condition,
@@ -29,6 +12,7 @@ template<
 		>
 struct While_
 {
+//x 完成本地迭代，再进入下一次迭代的判断
 	// 执行完本次迭代后的Env_
 	using NextEnv = typename Iter_<Env_>::RET ;
 
@@ -36,12 +20,9 @@ struct While_
 	enum{ next_condition = Con_<NextEnv>::RET };
 
 	// 如果下一个Env继续迭代，则使用下一次迭代的结果； 否则返回当前Env的结果
-	
-	using RET = typename IF<Condition,
-							typename While_<next_condition, Con_, Iter_, NextEnv>::RET,
-							Env_
-						 >::RET;
+	using RET = typename While_<next_condition, Con_, Iter_, NextEnv>::RET	;
 };
+
 //? While_<>模板偏特化：当false时
 template<
 		template<typename> class Con_,		
@@ -57,12 +38,12 @@ struct While_<false, Con_,Iter_,Env_>
 template<
 		template<typename> class Con_,		// 第1个模板参数： 一个模板（其参数为：1个类型）——> 1个“似函数”模板
 		template<typename > class Iter_,	// 第2个模板参数： 一个模板（其参数为：1个类型）——> 1个“似函数”模板
-		typename Env_						// 第3个模板参数： 一个类型
+		typename StartEnv						// 第3个模板参数： 一个类型
 		>
 struct WHILE
 {
-	enum { go = Con_<Env_>::RET  };
-	using RET = typename While_<go, Con_, Iter_, Env_>::RET;
+	enum { go = Con_<StartEnv>::RET  };
+	using RET = typename While_<go, Con_, Iter_, StartEnv>::RET;
 };
 //X --------------------------------------------------------------------------------------------------
 /*
@@ -114,7 +95,6 @@ struct FibCond
 };
 
 //X --------------------------------------------------------------------------------------------------
-//? --------------------------------------------------------------------------------------------------
 template<int n>
 struct Fib
 {
@@ -126,3 +106,8 @@ struct Fib
 				 >::RET::x	,
 	};
 };
+
+void main_while()
+{
+	cout << Fib<15>::RET; 
+}

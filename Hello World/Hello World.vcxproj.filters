@@ -30,10 +30,22 @@
     <ClCompile Include="Switch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Switch-参考答案.cpp">
+    <ClCompile Include="Fibonacci Recursion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Fibonacci Recursion.cpp">
+    <ClCompile Include="Switch Answer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="While.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Do.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="For.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EWhile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
