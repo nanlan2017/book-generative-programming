@@ -49,18 +49,6 @@ struct WHILE
 	using RET = typename While_<go, Con_, Iter_, StartEnv>::RET;
 };
 //X --------------------------------------------------------------------------------------------------
-/*
-template<bool Condition,     // 循环的继续条件
-		int n,				 // 循环的参数
-		int i, int x, int y> // 循环过程中的状态: 当前处于的下标、当前结果
-struct Fib_
-{
-	enum
-	{
-		RET = Fib_<(i+1<n), n, i+1, x+y, x>::RET	
-	};
-};
-*/
 //? 环境：一次迭代的栈的状态
 template<int n_,int i_,int x_,int y_>
 struct FibEnv

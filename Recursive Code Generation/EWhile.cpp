@@ -1,5 +1,5 @@
 #include <iostream>
-#include "_Common.h"
+#include "../Hello World/_Common.h"
 using namespace std;
 /*
 //x----------------------------------------------------------------
@@ -33,19 +33,14 @@ struct EWHILE
 
 	static void exec()
 	{
-		// 1. call Statement if Condition OK
+		// 1. call Statement
 		//x 获取本次迭代要产生的目标语句（在Statement中）
 		IF<isOK ,Statement ,STOP>::RET::exec();
 
-		// 2. 递归调用 EWHILE<> if  Condition OK
+		// 2. 递归调用 EWHILE<>
 		IF<isOK, EWHILE<Condition,Next_Statement>, STOP>::RET::exec();
 	}
 };
-
-
-
-
-
 //x----------------------------------------------------------------
 //? 一个迭代体
 template <int i_ = -1>

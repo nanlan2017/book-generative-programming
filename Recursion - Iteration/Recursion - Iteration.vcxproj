@@ -110,6 +110,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="_Common.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Do.cpp" />
+    <ClCompile Include="For.cpp" />
+    <ClCompile Include="While++.cpp" />
+    <ClCompile Include="While.cpp" />
+    <ClCompile Include="_Factorial.cpp" />
+    <ClCompile Include="_Fibonacci.cpp" />
+    <ClCompile Include="___控制 递归终止.cpp" />
+    <ClCompile Include="___用递归 构建迭代结构.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

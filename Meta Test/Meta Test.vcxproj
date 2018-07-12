@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4CB2D074-6955-4FFB-9F77-5BB5AF3B837D}</ProjectGuid>
-    <RootNamespace>RecursiveCodeGeneration</RootNamespace>
+    <ProjectGuid>{B35C754D-CB2D-46B9-BCCE-A7DF2951A524}</ProjectGuid>
+    <RootNamespace>MetaTest</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,14 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="add_vector.cpp" />
-    <ClCompile Include="EDo.cpp" />
-    <ClCompile Include="EFor.cpp" />
-    <ClCompile Include="EWhile.cpp" />
-    <ClCompile Include="EWhile1.cpp" />
-    <ClCompile Include="partial loop unrolling.cpp" />
-    <ClCompile Include="_Power.cpp" />
-    <ClCompile Include="___厘清每个实体的语义.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hello World.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="type traits.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -27,25 +24,16 @@
     <ClCompile Include="List-Tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Switch.cpp">
+    <ClCompile Include="Switch_v2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Fibonacci Recursion.cpp">
+    <ClCompile Include="basics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Switch Answer.cpp">
+    <ClCompile Include="___要素与技巧.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="While.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Do.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="For.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EWhile.cpp">
+    <ClCompile Include="Switch x错误版.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,7 +41,7 @@
     <ClInclude Include="_Common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IF.h">
+    <ClInclude Include="IF_v2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -62,7 +62,7 @@ struct Sqrt
 {
 	enum
 	{
-		p = DO< SqrtStat<n, -1>, SqrtCondition >::RET::p;
+		p = DO< SqrtStat<n, -1>, SqrtCondition >::RET::p
 	};
 };
 

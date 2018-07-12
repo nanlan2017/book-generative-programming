@@ -110,20 +110,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Do.cpp" />
-    <ClCompile Include="EWhile.cpp" />
-    <ClCompile Include="Fibonacci Recursion.cpp" />
-    <ClCompile Include="For.cpp" />
-    <ClCompile Include="Switch Answer.cpp" />
-    <ClCompile Include="Switch.cpp" />
+    <ClCompile Include="basics.cpp" />
+    <ClCompile Include="Switch_v2.cpp" />
+    <ClCompile Include="Switch x错误版.cpp" />
     <ClCompile Include="type traits.cpp" />
     <ClCompile Include="functions.cpp" />
-    <ClCompile Include="Hello World.cpp" />
     <ClCompile Include="List-Tree.cpp" />
-    <ClCompile Include="While.cpp" />
+    <ClCompile Include="___要素与技巧.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IF.h" />
+    <ClInclude Include="IF_v2.h" />
     <ClInclude Include="_Common.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
