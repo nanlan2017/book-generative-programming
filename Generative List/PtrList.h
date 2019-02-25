@@ -53,14 +53,14 @@ private:
 
 //X ============================================================================
 //? 析构组件：
-// 若链表保存的是元素的拷贝/自身引用，则用此析构。
+//x 若链表保存的是元素的拷贝/自身引用，则用此析构。
 template<typename ElementType>
 struct ElementDestoryer
 {
 	static void destory(ElementType* e) { delete e; }
 };
 
-// 若对Elements的持有是“external reference”
+//x 若对Elements的持有是“external reference”
 template<typename ElementType>
 struct EmptyDestoryer
 {
@@ -68,6 +68,7 @@ struct EmptyDestoryer
 };
 //X ============================================================================
 //? TypeChecker
+//X 单态链表要检查类型是否一致
 template<typename ElementType>
 struct DynamicTypeChecker
 {
@@ -77,6 +78,7 @@ struct DynamicTypeChecker
 	}
 };
 
+//x 多态链表不检查类型
 template<typename ElementType>
 struct EmptyTypeChecker
 {
@@ -84,25 +86,28 @@ struct EmptyTypeChecker
 };
 //X ============================================================================
 //? 拷贝工具Copier
+//x 多态链表的拷贝，需调用各个元素的clone()方法
 template<typename ElementType>
 struct PolymorphicCopier
 {
 	static ElementType* copy(ElementType& e) { return e->clone(); }
 };
 
+//x 单态链表，则对element就行拷贝构造
 template<typename ElementType>
 struct MonomorphicCopier
 {
 	static ElementType* copy(ElementType& e) { return new ElementType(e); }
 };
 
+//x 引用持有的元素，不对元素进行拷贝
 template<typename ElementType>
 struct EmptyCopier
 {
 	static ElementType* copy(ElementType& e) { return &e; }
 };
 //X ============================================================================
-template<typename BaseList>
+template<typename BaseList>	
 class LengthList: public BaseList
 {
 public:

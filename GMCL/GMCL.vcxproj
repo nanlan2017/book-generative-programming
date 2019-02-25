@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{21162B62-A3BA-4505-AF8E-85169C500717}</ProjectGuid>
-    <RootNamespace>GenerativeList</RootNamespace>
+    <ProjectGuid>{96FE3A7B-4819-4C17-92F7-5398A88A340F}</ProjectGuid>
+    <RootNamespace>GMCL</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,16 +110,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PtrList.h" />
-    <ClInclude Include="test0.cpp" />
+    <ClInclude Include="boundschecker.h" />
+    <ClInclude Include="commainitializer.h" />
+    <ClInclude Include="compatchecker.h" />
+    <ClInclude Include="containers.h" />
+    <ClInclude Include="diags.h" />
+    <ClInclude Include="dictionaries.h" />
+    <ClInclude Include="dsl to iccl.h" />
+    <ClInclude Include="dsl.h" />
+    <ClInclude Include="dslassigndefaults.h" />
+    <ClInclude Include="dslparser.h" />
+    <ClInclude Include="dsltypeinfo.h" />
+    <ClInclude Include="equal.h" />
+    <ClInclude Include="ext.h" />
+    <ClInclude Include="formats.h" />
+    <ClInclude Include="generativematrix.h" />
+    <ClInclude Include="hashfunctions.h" />
+    <ClInclude Include="iccl.h" />
+    <ClInclude Include="if.h" />
+    <ClInclude Include="matrixassignment.h" />
+    <ClInclude Include="matrixgenerator.h" />
+    <ClInclude Include="matrixlazyoperations.h" />
+    <ClInclude Include="matrixtypepromotion.h" />
+    <ClInclude Include="maxmin.h" />
+    <ClInclude Include="memoryallocerrornotifier.h" />
+    <ClInclude Include="promote.h" />
+    <ClInclude Include="scalarvalue.h" />
+    <ClInclude Include="topwrapper.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="list Generator.h" />
-    <ClCompile Include="Swappable.cpp" />
-    <ClCompile Include="___思考.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="GenVoca Component  Structure-List.png" />
+    <ClCompile Include="demomain.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

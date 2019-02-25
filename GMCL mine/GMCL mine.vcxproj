@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{21162B62-A3BA-4505-AF8E-85169C500717}</ProjectGuid>
-    <RootNamespace>GenerativeList</RootNamespace>
+    <ProjectGuid>{E52B8D4F-CC7C-4F44-B78E-D5D5781FD1E9}</ProjectGuid>
+    <RootNamespace>GMCLmine</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,16 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PtrList.h" />
-    <ClInclude Include="test0.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="list Generator.h" />
-    <ClCompile Include="Swappable.cpp" />
-    <ClCompile Include="___思考.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="GenVoca Component  Structure-List.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

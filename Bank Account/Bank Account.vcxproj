@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{21162B62-A3BA-4505-AF8E-85169C500717}</ProjectGuid>
-    <RootNamespace>GenerativeList</RootNamespace>
+    <ProjectGuid>{3E8A1521-043D-4F05-8E3F-21DB2991C88A}</ProjectGuid>
+    <RootNamespace>BankAccount</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,16 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PtrList.h" />
-    <ClInclude Include="test0.cpp" />
+    <ClInclude Include="account.h" />
+    <ClInclude Include="overdraft.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="list Generator.h" />
-    <ClCompile Include="Swappable.cpp" />
-    <ClCompile Include="___思考.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="GenVoca Component  Structure-List.png" />
+    <Image Include="GenVoca Component  Structure.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

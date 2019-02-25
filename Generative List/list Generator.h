@@ -8,6 +8,7 @@
 //? °∞≈‰÷√DSL°±
 enum Ownership { ext_ref,own_ref, cp};
 enum Morphology { mono, poly };
+
 enum CounterFlag { with_counter, no_counter };
 enum TracingFlag { with_tracing, no_tracing };
 
